@@ -1,0 +1,13 @@
+{
+  "name": "book-search-spa",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["frontend", "backend", "shared"],
+  "scripts": {
+    "dev": "concurrently -n frontend,backend -c cyan,yellow \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\"",
+    "typecheck": "npm run typecheck --workspace=frontend && npm run typecheck --workspace=backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
